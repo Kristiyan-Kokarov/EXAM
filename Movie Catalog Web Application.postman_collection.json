@@ -1,0 +1,209 @@
+{
+	"info": {
+		"_postman_id": "a2e9c938-34d2-4150-b4a1-add33ee712c8",
+		"name": "Movie Catalog Web Application",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32578416"
+	},
+	"item": [
+		{
+			"name": "/api/user/authentication",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"kokarov111@abv.bg\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://moviecatalog-env.eba-ubyppecf.eu-north-1.elasticbeanstalk.com/api/user/authentication",
+					"protocol": "http",
+					"host": [
+						"moviecatalog-env",
+						"eba-ubyppecf",
+						"eu-north-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"api",
+						"user",
+						"authentication"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/movie/create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiIxM2ZiYWZhNy05ZGQ5LTQ4YWYtYjBiNC1iYWY2NWM5ZjFlMjUiLCJpYXQiOiI0LzE0LzIwMjQgOTo1MzoxOCBBTSIsIlVzZXJJZCI6IjE1Yjc3ODQ4LWE1MmItNDg5ZS0xYzEwLTA4ZGM1YzQ3OWI0ZSIsIkVtYWlsIjoia29rYXJvdjExMUBhYnYuYmciLCJVc2VyTmFtZSI6ImdkZmdkZmciLCJleHAiOjE3MTMxMDk5OTgsImlzcyI6Ik1vdmllQ2F0YWxvZ19BcHBfU29mdFVuaSIsImF1ZCI6Ik1vdmllQ2F0YWxvZ19XZWJBUElfU29mdFVuaSJ9.3gSAdLvE02bl_D8i2HaMKLzK0YZj9RUjKka52L3kykw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Star Wars\",\r\n    \"description\": \"The number 1 movie of all time\",\r\n    \"posterUrl\": \"\",\r\n    \"trailerLink\": \"\",\r\n    \"isWatched\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://moviecatalog-env.eba-ubyppecf.eu-north-1.elasticbeanstalk.com/api/movie/create",
+					"protocol": "http",
+					"host": [
+						"moviecatalog-env",
+						"eba-ubyppecf",
+						"eu-north-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"api",
+						"movie",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/catalog/all",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiIxM2ZiYWZhNy05ZGQ5LTQ4YWYtYjBiNC1iYWY2NWM5ZjFlMjUiLCJpYXQiOiI0LzE0LzIwMjQgOTo1MzoxOCBBTSIsIlVzZXJJZCI6IjE1Yjc3ODQ4LWE1MmItNDg5ZS0xYzEwLTA4ZGM1YzQ3OWI0ZSIsIkVtYWlsIjoia29rYXJvdjExMUBhYnYuYmciLCJVc2VyTmFtZSI6ImdkZmdkZmciLCJleHAiOjE3MTMxMDk5OTgsImlzcyI6Ik1vdmllQ2F0YWxvZ19BcHBfU29mdFVuaSIsImF1ZCI6Ik1vdmllQ2F0YWxvZ19XZWJBUElfU29mdFVuaSJ9.3gSAdLvE02bl_D8i2HaMKLzK0YZj9RUjKka52L3kykw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://moviecatalog-env.eba-ubyppecf.eu-north-1.elasticbeanstalk.com/api/catalog/all",
+					"protocol": "http",
+					"host": [
+						"moviecatalog-env",
+						"eba-ubyppecf",
+						"eu-north-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"api",
+						"catalog",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/movie/edit?movieId=f51070fe-3132-4445-cffa-08dc5c49ee87",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiIxM2ZiYWZhNy05ZGQ5LTQ4YWYtYjBiNC1iYWY2NWM5ZjFlMjUiLCJpYXQiOiI0LzE0LzIwMjQgOTo1MzoxOCBBTSIsIlVzZXJJZCI6IjE1Yjc3ODQ4LWE1MmItNDg5ZS0xYzEwLTA4ZGM1YzQ3OWI0ZSIsIkVtYWlsIjoia29rYXJvdjExMUBhYnYuYmciLCJVc2VyTmFtZSI6ImdkZmdkZmciLCJleHAiOjE3MTMxMDk5OTgsImlzcyI6Ik1vdmllQ2F0YWxvZ19BcHBfU29mdFVuaSIsImF1ZCI6Ik1vdmllQ2F0YWxvZ19XZWJBUElfU29mdFVuaSJ9.3gSAdLvE02bl_D8i2HaMKLzK0YZj9RUjKka52L3kykw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Lord of the Rings \",\r\n    \"description\": \"Second Best\",\r\n    \"posterUrl\": \"\",\r\n    \"trailerLink\": \"\",\r\n    \"isWatched\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://moviecatalog-env.eba-ubyppecf.eu-north-1.elasticbeanstalk.com/api/movie/edit?movieId=f51070fe-3132-4445-cffa-08dc5c49ee87",
+					"protocol": "http",
+					"host": [
+						"moviecatalog-env",
+						"eba-ubyppecf",
+						"eu-north-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"api",
+						"movie",
+						"edit"
+					],
+					"query": [
+						{
+							"key": "movieId",
+							"value": "f51070fe-3132-4445-cffa-08dc5c49ee87"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/movie/delete?movieId=8b6e8aa1-8eb4-43da-95a8-08dc5c48be96",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiIxM2ZiYWZhNy05ZGQ5LTQ4YWYtYjBiNC1iYWY2NWM5ZjFlMjUiLCJpYXQiOiI0LzE0LzIwMjQgOTo1MzoxOCBBTSIsIlVzZXJJZCI6IjE1Yjc3ODQ4LWE1MmItNDg5ZS0xYzEwLTA4ZGM1YzQ3OWI0ZSIsIkVtYWlsIjoia29rYXJvdjExMUBhYnYuYmciLCJVc2VyTmFtZSI6ImdkZmdkZmciLCJleHAiOjE3MTMxMDk5OTgsImlzcyI6Ik1vdmllQ2F0YWxvZ19BcHBfU29mdFVuaSIsImF1ZCI6Ik1vdmllQ2F0YWxvZ19XZWJBUElfU29mdFVuaSJ9.3gSAdLvE02bl_D8i2HaMKLzK0YZj9RUjKka52L3kykw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://moviecatalog-env.eba-ubyppecf.eu-north-1.elasticbeanstalk.com/api/movie/delete?movieId=5c18944b-f3c1-4e06-4b57-08dc5c49929d",
+					"protocol": "http",
+					"host": [
+						"moviecatalog-env",
+						"eba-ubyppecf",
+						"eu-north-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"api",
+						"movie",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "movieId",
+							"value": "5c18944b-f3c1-4e06-4b57-08dc5c49929d"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
